@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Gulp Starter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="resources/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- build:css -->
+  <link rel="stylesheet" href="resources/css/global.css">
+  <!-- endbuild -->
+  <!-- build:plugins -->
+  <script src="resources/js/particles.min.js"></script>
+  <!-- endbuild -->
+</head>
+<body>
+  <app>
+    <div id="loading">
+      <img id="image" src="resources/img/loading.svg">
+    </div>
+  </app>
+  <!-- build:vendor -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <!-- endbuild -->
+  <!-- build:main -->
+  <script>
+    System.import('app/vendor').then(function () {
+      System.import('app').catch(function (err) { console.error(err); });
+    });
+  </script>
+<!-- endbuild -->
+</body>
+</html>
